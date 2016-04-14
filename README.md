@@ -9,5 +9,5 @@ social relationships in a mobile social network.
 
 
 ### Reference
-The latex template is from [https://github.com/BHOSC/BUAAthesis](BUAAthesis) repository.
+The latex template is from [BUAAthesis](https://github.com/BHOSC/BUAAthesis) repository.
 
