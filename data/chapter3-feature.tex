@@ -48,14 +48,14 @@
 \end{table}
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=1,width=0.7\textwidth]{figure/FamilyClique.png}
     \caption{家庭集团大小分布}
     \label{fig-familyclique}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=1,width=0.7\textwidth]{figure/ColleagueClique.png}
     \caption{同事集团大小分布}
@@ -76,12 +76,81 @@
 
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=1,width=0.8\textwidth]{figure/callFrequencyDistribution.png}
     \caption{社交关系与不同小时段通话频率之间的联系}
     \label{fig-callFrequency}
 \end{figure}
+
+从日常生活经验中，我们可以知道，人们在周末和工作日的通话行为往往是不一样的，为此，有必要分析不同社交关系在工作日和周末的通话行为。如图3.4，图(a)为在工作日的不同社交关系通话频率分布差异，图(b)为在周末不同社交关系的通话频率分布差异。除了在上述图3.3的分析中所发现的特性，我们分析工作日和周末通话频率的共性和差异可以知道，无论是周末还是工作日，具有家庭关系的用户的通话频率都远远的超过具有同事或朋友关系的用户，这也充分体现了人们往往与自己的家人联系数量最多、最为紧密。同时，在周末，无论是具有家庭关系还是同事关系的用户，相对于工作日，两类关系的通话频率均有下降。这并不难发现，在周末家人大多数时间都是呆在一块，并不需要通过电话来进行联系。而同事之间在休息日若无工作，则很少通过电话来进行沟通。而朋友关系，正如在图3.3中所发现的，在周末和工作日的分布较为平稳，没有很大的区分，这也反映了朋友关系之间的稳定性。
+
+
+\begin{figure}[!ht]
+    \centering
+    \subfigure[工作日通话频率分布]{
+        \label{fig-call-weekday}
+        \includegraphics[width=.8\textwidth]{figure/callFrequencyWeekDayDistribution.png}
+    }
+    \hspace{7em} % 水平间隔
+    \subfigure[周末通话频率分布]{
+        \label{fig-call-weekends}
+        \includegraphics[width=.8\textwidth]{figure/callFrequencyWeekendsDistribution.png}
+    }
+    \caption{社交关系与不同小时段通话频率之间在工作日与周末的区别与联系}
+    \label{fig-sub}
+\end{figure}
+
+\subsection{通话熵分布分析}
+
+我们知道，我们会在不同的时间段内与不同的人通话联系。通常人们会在他们工作的时间与他们的同事通过手机联系。虽然说家人们主要集中在忙时通话，如下班之后。但是大多数的人们如果需要和他们的家人联系则不会等到某个特定的时间段内再联系，而是会直接打电话联系。为了定量描述这一特性，我们提出了通话熵的概念，可以用来描述用户之间通话的稳定性。熵的概念来源于信息领域，常常用来描述变量的随机性。由熵的概念而联想到的，我们定义了，通话熵的概念，用来描述通话在时间分布上的随机性。
+
+\begin{definition}
+    \label{call-entrpy-concept}
+    \textbf{通话熵}计算公式，
+    \begin{equation}
+        CallEntropy = - \sum_{i=1}^{T}p(x_i)\cdot\log p(x_i)
+    \end{equation}
+\end{definition}
+
+
+其中，$p(x_i)$ 代表了用户在第$i$小时段内通话的概率，$T$的值通常被设置为24，代表了一天里面有24小时。其计算结果代表了用户通话在一天内时间上的不确定性。如果通话熵的值比较小，那么用户的通话时间分布相对来说比较集中，这也意味着用户的通话时间分布相对比较稳定一些。反之，如果用户的通话熵越大，那么用户通话的时间越分散，即反映了该用户群体的通话时间越不确定。
+
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=1,width=0.9\textwidth]{figure/CallEntropyDistribution.png}
+    \caption{社交关系与通话熵之间的联系}
+    \label{fig-call-entropy}
+\end{figure}
+
+
+在此概念的基础上，图3.5统计了不同社交关系用户的平均通话熵分布。我们可以发现基本上所有不同的社交关系的通话熵分布都遵循高斯分布。但是，具有朋友的社交关系的通话熵值是最大的，而具有家庭关系的用户的通话熵值小一些，而同事关系的通话熵值是最小的。这一现象揭示了同事之间往往会选择在特定的时间段(从前面的分析中我们可以知道主要在工作时间段内)进行通话，而家人和朋友则更多会随意一些。这也充分证明了朋友关系是作为一种非常重要的社交关系，因为人们在想起了事情或者想朋友了就会随时给他们打电话。这一区分度非常符合我们在实际生活中的通话习惯，以及处理不同社交关系的基本策略等等。
+
+\subsection{空间位置同现性分析}
+
+与传统的社交网络相比，
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
