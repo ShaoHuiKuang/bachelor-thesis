@@ -48,14 +48,14 @@
 \end{table}
 
 
-\begin{figure}[!ht]
+\begin{figure}[h]
     \centering
     \includegraphics[scale=1,width=0.7\textwidth]{figure/FamilyClique.png}
     \caption{家庭集团大小分布}
     \label{fig-familyclique}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[h]
     \centering
     \includegraphics[scale=1,width=0.7\textwidth]{figure/ColleagueClique.png}
     \caption{同事集团大小分布}
@@ -70,7 +70,22 @@
 
 \subsection{基本社交通话特征行为分析}
 
-从以前的研究中，我们可以知道，通过用户的通话记录，用户之间的关系(朋友、非朋友)能够
+从以前的研究中，我们可以知道，通过用户的通话记录，用户之间的关系(朋友、非朋友)能够很好的被识别出来\upcite{min2013mining}。但在那篇文章所用到的数据集都非常的小，并不能代表用户交互之间公共的特点，并不能直接认为围绕通话记录所得到的通话特征行为在我们的数据集上也有同样的效果。因此，我们在我们文章的数据集中重新考虑了用户之间的通话记录对关系识别的影响。
+
+在图3.3中，我们分析了不同的社交关系在一天之内，不同小时段的通话概率分布情况。这里我们定义忙时为每天的10AM到12AM，6PM到9PM期间。可以看到，无论哪儿种关系，在通话整体分布上呈现双峰分布，而曲线的最高点即为每天的忙时期间。在图中我们不难发现到，那些具有家庭关系的用户会比具有同事关系的用户拥有更高的交流通话频率。除此之外，我们也可以观察到，家人之间往往会选择在忙时进行通话。而具有同事关系的用户，往往选择的是在工作时间段(每天的9点到12点，以及下午14点到18点)内进行通话，而到了下班时间，我们会选择与具有家庭关系的用户进行通话，很有可能要通知家人是否要回去吃晚餐，大概几点会到家等话题。另外，朋友关系并不具有很明显的时间段分布，这反映了朋友关系往往是有事了才会选择通话，而并不具有每日特定时段的规律性，反映了朋友通话的随机性。从中我们可以知道，不同社交关系在不同时段之间的通话关系在一定程度上，反映了我们日常的行为，如从上述分析中我们可以知道人们往往会在下班之后选择和家人进行通话。这也充分反映了通话行为在识别不同社交关系的有效性。
+
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=1,width=0.8\textwidth]{figure/callFrequencyDistribution.png}
+    \caption{社交关系与不同小时段通话频率之间的联系}
+    \label{fig-callFrequency}
+\end{figure}
+
+
+
+
 
 
 
