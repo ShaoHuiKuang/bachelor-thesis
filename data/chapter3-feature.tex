@@ -145,6 +145,35 @@
 
 
 
+\begin{figure}[ht]
+    \centering
+    \subfigure[工作日不同社交关系同现特征分布]{
+        \label{fig-spatialhomo-weekday}
+        \includegraphics[width=.8\textwidth]{figure/spatialHomoWeekday.png}
+    }
+    \hspace{7em} % 水平间隔
+    \subfigure[周末不同社交关系同现特征分布]{
+        \label{fig-spatialhomo-weekends}
+        \includegraphics[width=.8\textwidth]{figure/spatialHomoWeekends.png}
+    }
+    \caption{社交关系与位置同现特征在工作日与周末的区别与联系}
+    \label{fig-spatialhomo}
+\end{figure}
+
+图\ref{fig-spatialhomo}则显示了不同社交关系的用户在一天内同现的可能性分布，图\ref{fig-spatialhomo-weekday}为在工作日的同现特征分布，图\ref{fig-spatialhomo-weekends}为在周末的同现特征分布。图中横坐标为一天中的24小时，纵坐标为同现概率，这里我们定义同现概率。
+
+
+
+\begin{definition}
+    \label{spatial-homo-concept}
+    \textbf{同现概率}定义，
+    \begin{equation}
+        C^{h}(x,y) = \sum_{l \in L}p_{x}^{h}(l) \times p_{y}^{h}(l)
+    \end{equation}
+\end{definition}
+
+
+其中$L$ 为基站总集合，$p_{x}^{h}(l)$ 代表了用户$\bm{x}$在时刻$h$内出现在地理位置$l$的概率与可能性。
 
 
 
