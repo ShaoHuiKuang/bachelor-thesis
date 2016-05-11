@@ -2,11 +2,18 @@
 
 % 中英文摘要
 \begin{cabstract}
-这部分当然是待写啦，等着所有的内容写完了再写摘要。
+众所周知，不同的社交关系往往对人们有着不同的影响。然而，由于受到可靠数据的限制，许多研究都将他们的研究重点集中放在在推测朋友关系，或者在一个很小的数据集上进行研究。与此同时，随着移动位置服务(Location Based Service)的兴起，越来愈多的研究者开始利用一些新的附加信息：人们去过的地方。
+
+在我们的工作中，我们研究如何为移动社交网络设计一个社交关系识别算法。我们使用由中国某移动运营商所提供的中国河南省某县级市的通话网络来进行研究工作，而这些通话网络数据附带有特别的关系(家庭，同事和朋友关系)。我们先从总体上分析了时间和空间，还有各种社交因素对于关系识别的影响。于此同时，我们提出了一个可以定义人们日常经常去过的地方类别的方法(如学校，购物中心等)，并在此基础上，我们找到了几个比较有效的时空特征，来预测移动网络中的关系类型。进一步，我们分析了用户最常去的地方，发现了不同的社交关系往往具有不同的行为特征。
+
+基于这些发现。我们阐述了一个可以通过学习我们先有得移动网络特点的模型框架，用来区分不同社交关系类型。这个框架能够将我们之前所发现的特征糅合到一个因子图里面去，这样能够有效提高关系识别的准确性。我们的实验评估显示了时空因素与社交理论是如何显著提高了关系识别的准确度，以及我们的模型在关系识别任务上的有效性与准确性。这一系列的结果证实了我们的算法的优越性，为基于移动社交网络的关系识别研究开启了一扇新的大门。
+
 \end{cabstract}
 
 \begin{eabstract}
-Here is the Abstract in English. And this is a test sentence, You maybe enjoy
-the process of writting a thesis You can just ignore this.\par
-This is another pargraph.
+It is well known that different types of social ties have essentially different influence on people. However, due to the limitation of reliable data, a bulk of research has focused on inferring friend relationships or has done on a small dataset. What's more, with the soaring adoption of location based social services it becomes possible to take advantage an additional source of information: the places people visit.
+
+In this work, we study the problem of designing a social tie recognition system for mobile network. We used a dataset of a middle city in China provide by China Mobile, with specific relationships(families, colleagues and friends) in the network. We analyze the spatial and temporal influence on recognition and development of relationships. What's more, we proposed a method to define place categories(such as schools, malls) that users visit in their daily activities. From this perspective, we find several effective spatial features to infer social ties in the mobile network. Further, we study a special place that user visit most in their daily activities, home and workplace, which shows different charateristics on inferring different relationships.
+
+Building on these findings, we describe a framework for classifying the type of social relationships by learning the charateristics of our existing mobile network. The framework incorparates what we find into a factor graph model, which effectively improives the accuracy of inferring the types of social relationships in the mobile network.  Our evaluation shows how the inclusion of inforamtion about spatial factors and related user activities offer high social relationship recognition performance. These results open new directions for realworld relationship recognition system on location-based social network.
 \end{eabstract}
