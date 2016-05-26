@@ -97,10 +97,10 @@ Z^{\star} = \sum_{\bm{x}} \prod_{Q \in C^{\star}} \psi_Q(\bm{X}_Q) \\
 
 下面我们对马尔科夫随机场的独立性进行说明 \\
 \begin{itemize}
-\item 全局马尔科夫性(\textit{Global Markov Property})：给定两个变量集的分离集，则这两个变量集条件独立。 \\
-\item 局部马尔科夫性(Local Markov property)：给定某个变量的近邻变量，或者称为该变量的马尔科夫毯(Markov blanket)，则该变量独立于其他的变量。用形式化语言来描述即为，让V为网络中的结点集合，$n(v)$为结点$v$在网络图中的近邻节点，$n^{\star}(v) = n(v)\cup \{v\}$，有$\bm{x}_v \perp \bm{x}_{V 	\backslash n^{\star}(v)} \mid \bm{x}_{n(v)} $ \\
+\item 全局马尔科夫性(\textit{Global Markov Property})：给定两个变量集的分离集，则这两个变量集条件独立。 
+\item 局部马尔科夫性(Local Markov property)：给定某个变量的近邻变量，或者称为该变量的马尔科夫毯(Markov blanket)，则该变量独立于其他的变量。用形式化语言来描述即为，让V为网络中的结点集合，$n(v)$为结点$v$在网络图中的近邻节点，$n^{\star}(v) = n(v)\cup \{v\}$，有$\bm{x}_v \perp \bm{x}_{V 	\backslash n^{\star}(v)} \mid \bm{x}_{n(v)} $ 
 
-\item 成对的马尔科夫性(\textit{pairwise Markov property})：给定所有其他变量，两个非邻近变量条件独立。形式化语言来说，即令图中的节点集合和边的结合分别为$V$和$E$，对于网络图中的两个节点$u$和$v$，如果$<u,v> \notin E$，则$\bm{x}_u \perp \bm{x}_v \mid X_{V \backslash <u, v>}$。\\
+\item 成对的马尔科夫性(\textit{pairwise Markov property})：给定所有其他变量，两个非邻近变量条件独立。形式化语言来说，即令图中的节点集合和边的结合分别为$V$和$E$，对于网络图中的两个节点$u$和$v$，如果$<u,v> \notin E$，则$\bm{x}_u \perp \bm{x}_v \mid X_{V \backslash <u, v>}$。
 
 
 \end{itemize}
@@ -173,7 +173,7 @@ P(y_i \mid \bm{x},\bm{y}_{V \backslash \{i\}}) = P(y_i \mid \bm{x}, \bm{y}_{n(i)
 
 对于概率图模型，求解的过程实质就是确定具体的未知参数分布，这也被称为参数估计或者参数学习问题。换个角度，如果将未知参数看作未知变量，那么参数估计的过程则和未知变量推断的过程非常相似。因此， 两个问题都可以归结为概率图模型中的推断问题。
 
-概率图模型中的推断方法大致可以分为两大类\upcite{wainwright2008graphical,koller20072}，第一类为精确推断，即通过数学推导的方法精确计算出目标变量的边际分布的准确值。但是，一般来说，此类方法的计算复杂度为指数级别，该类方法的使用范围有限。第二类则为近似推断的方法，即能够在较低的时间复杂度内实现对原来问题的近似求解。此类方法在现实研究中运用的更加常见，该类方法也主要分为两大类：即第一类为采样(sampling)，采用随机采样的方法对结果进行近似求解；另外一类是变分推断(variational inference)，即近似进行推断求解。在我们的问题中，我们为了算法效率的高效性，采用的是信念传播的近似求解，置信信念传播(Loopy Belief Propagation)进行参数的学习与推断。
+概率图模型中的推断方法大致可以分为两大类\upcite{koller20072}，第一类为精确推断，即通过数学推导的方法精确计算出目标变量的边际分布的准确值。但是，一般来说，此类方法的计算复杂度为指数级别，该类方法的使用范围有限。第二类则为近似推断的方法，即能够在较低的时间复杂度内实现对原来问题的近似求解。此类方法在现实研究中运用的更加常见，该类方法也主要分为两大类：即第一类为采样(sampling)，采用随机采样的方法对结果进行近似求解；另外一类是变分推断(variational inference)，即近似进行推断求解。在我们的问题中，我们为了算法效率的高效性，采用的是信念传播的近似求解，置信信念传播(Loopy Belief Propagation)进行参数的学习与推断。
 
 
 
