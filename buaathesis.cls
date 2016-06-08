@@ -71,8 +71,8 @@ The LaTeX template for thesis of BUAA]
 
 \RequirePackage{geometry}
 \newgeometry{
-    top=30mm, bottom=25mm, left=30mm, right=20mm,
-    headsep=5mm,
+    top=30mm, bottom=30mm, left=30mm, right=20mm,
+    headsep=5mm, headheight=10mm, footskip=10mm,
 }
 \savegeometry{bachelorgeometry}
 \newgeometry{
@@ -843,7 +843,7 @@ The LaTeX template for thesis of BUAA]
         \ulinel{\buaa@bachelor@assign@req@two}
         \ulinel{\buaa@bachelor@assign@req@three}
         \ulinel{\buaa@bachelor@assign@req@four}
-        \ulinel{\buaa@bachelor@assign@req@five}
+        %\ulinel{\buaa@bachelor@assign@req@five}
         \stepcounter{assign}
         \Roman{assign}、毕业设计（论文）工作内容： \\[2.5ex]
         \ulinel{\buaa@bachelor@assign@work@one}

@@ -46,7 +46,7 @@ Recall = \frac{tp}{tp + fn} \\
 \caption{不同分类方法在社交关系识别任务上的准确率}
 \label{method-results}
 
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{c|c|c|c}
 	\hline
 Algorithm & Prec. & Accuracy  & F1-score\\ \hline
 Naive Bayes &0.663 & 0.685 & 0.673 \\ \hline
@@ -66,7 +66,7 @@ BTFG & 0.762 & 0.853 & \textbf{0.798} \\ \hline
 \begin{figure}[!ht]
     \centering
     \includegraphics[scale=1, width=0.9\textwidth]{figure/fcanalysis.png}
-    \caption{特征贡献分析。BTFG是提出的模型。BTFG-C是除去社交特征的模型。BTFG-G是除去时空特征的模型。BTFG-T是忽略三元结构特征的模型。BTFG-CT是同事忽略通话特征和三元结构的模型。BTFG-GT是忽略了地理特征与三元特征的模型。BTFG-BGT则是忽略了平衡因子、时空特征以及三元结构的模型。}
+    \caption{特征贡献分析}
     \label{fig-factor-contribution-analysis}
 \end{figure}
 
@@ -100,7 +100,7 @@ Oversampling & 0.787 & 0.741 & 0.89\\ \hline
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=1, width=0.9\textwidth]{figure/RatioPer.png}
+    \includegraphics[scale=1, width=0.79\textwidth]{figure/RatioPer.png}
     \caption{不同比例的不平衡数据集实验结果}
     \label{fig-imbalance-ratio}
 \end{figure}
