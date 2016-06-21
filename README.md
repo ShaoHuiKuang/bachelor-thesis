@@ -12,4 +12,4 @@ social relationships(Families, colleagues, friends) in a mobile social network.
 The latex template is from [BUAAthesis](https://github.com/BHOSC/BUAAthesis) repository. The bst file is from [BUAAthesis-mod](https://github.com/KagamiChan/BUAAthesis-mod).
 
 ### Award
-The thesis has won one of the best papers award of Beihang University.
+The thesis has won one of the best undergraduate thesis award of Beihang University.
